@@ -1,0 +1,9 @@
+Theme 1: Total drama Island
+Description: The scene. theme would be the movie background like its the actual movie, i want to create the general mood of the show . Total Drama Island was one of my favorite shows growing up and till date. I like character design. The design is inspired by the cartoon reality-show style of Total Drama Island. It uses bold outlines, flat colors, fun icons, and a camp-style look similar to the show. Zodiac signs would be shown as cartoon characters or challenge badges, each with exaggerated expressions and personality traits that match the sign. Sound will be the characters talking or someything from the show itself. Hover effects with pop-ups, bounce animations, stamp-style transitions, and playful “challenge completed” effects.
+
+
+Theme 2: Stranger things 
+Description: The design is inspired by the Stranger Things movie world. It uses dark tones, neon reds and blues, grainy textures, and cinematic lighting to feel like an actual scene from the show. Stranger Things is one of my favorite shows growing up and still is today. I love its mix of nostalgia, mystery, and strong visuals. Zodiac signs would appear as the characters. The soundtrack would the show's and Soft synth sounds for the hover efffects and floating particles to make the design feel alive and cinematic.
+
+Theme 3: Sing 2
+Description: The design is colorful, bright, and playful, inspired by the Sing 2 movie. It reflects a lively stage performance with bold colors, spotlights, and animated characters singing. The mood is fun and uplifting. I enjoy Sing 2 because of its music, characters, and positive message about confidence and following your dreams. It is also one of my favorite comfort movies. Each zodiac sign would be represented by a singing character using expressive poses. The sound design will be Short vocal notes triggered during interactions.
