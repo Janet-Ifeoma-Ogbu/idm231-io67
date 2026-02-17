@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/app.js"></script>
+    <title>05-exercise</title>
+</head>
+
+<body>
+  <header>
+    <h1>Week 05: Document Object Model (DOM)</h1>
+    <p class="subtitle">Follow along and learn to manipulate the DOM!</p>
+  </header>
+
+  <!-- Example 1: Change Text -->
+  <section>
+    <h2>Example 1: Change Text</h2>
+    <p class="instruction">
+      <strong>Goal:</strong> Select an element and change its text when the button is clicked
+    </p>
+    <div id="demo-box" class="demo-box">
+      Original text - waiting to be changed...
+    </div>
+    <button id="change-text-btn">Change Text</button>
+    <div id="select-output" class="output">Console: Waiting for button click...</div>
+  </section>
+
+  <!-- Example 2: Highlight Multiple Items -->
+  <section>
+    <h2>Example 2: Highlight Multiple Items</h2>
+    <p class="instruction">
+      <strong>Goal:</strong> Select ALL fruit items and add a highlight class to all of them at once
+    </p>
+    <ul id="fruit-list">
+      <li class="fruit-item">🍎 Apple</li>
+      <li class="fruit-item">🍌 Banana</li>
+      <li class="fruit-item">🍊 Orange</li>
+      <li class="fruit-item">🍇 Grape</li>
+    </ul>
+    <button id="highlight-btn">Highlight All</button>
+    <div id="multiple-output" class="output">Console: Waiting for action...</div>
+  </section>
+
+  <!-- Example 3: Add New Items -->
+  <section>
+    <h2>Example 3: Add New Items to a List</h2>
+    <p class="instruction">
+      <strong>Goal:</strong> Create a new list item and add it to the shopping list
+    </p>
+    <ul id="shopping-list">
+      <li>🥛 Milk</li>
+      <li>🍞 Bread</li>
+      <li>🥚 Eggs</li>
+    </ul>
+    <input type="text" id="new-item-input" placeholder="Type a new item...">
+    <button id="add-item-btn">Add to List</button>
+    <div id="add-output" class="output">Console: Ready to add items...</div>
+  </section>
+
+  <!-- Example 4: Remove Items -->
+  <section>
+    <h2>Example 4: Remove Items from a List</h2>
+    <p class="instruction">
+      <strong>Goal:</strong> Click on any task to remove it from the list
+    </p>
+    <ul id="task-list">
+      <li class="task">✅ Learn JavaScript basics</li>
+      <li class="task">✅ Understand the DOM</li>
+      <li class="task">✅ Practice selecting elements</li>
+      <li class="task">✅ Build something cool!</li>
+    </ul>
+    <div id="remove-output" class="output">Console: Click any task to remove it...</div>
+  </section>
+
+  <!-- Example 5: Toggle Classes -->
+  <section>
+    <h2>Example 5: Toggle Classes</h2>
+    <p class="instruction">
+      <strong>Goal:</strong> Add or remove a class by clicking the button (toggle means: add if it's not there, remove if it is!)
+    </p>
+    <div class="demo-box">
+      <div id="attribute-box" class="demo-box2">
+        👤 User Profile Box
+      </div>
+    </div>
+    <button id="toggle-class-btn">Toggle Highlight</button>
+    <div id="attribute-output" class="output">Console: Ready to toggle classes...</div>
+  </section>
+
+  <!-- Final Instructions -->
+  <section class="final-note">
+    <h2>🎯 You're Ready!</h2>
+    <p>Now open <code>app.js</code> in your code editor and follow along with the instructor.</p>
+    <p style="margin-top: 1rem;">Remember to:</p>
+    <ul style="margin-top: 0.5rem;">
+      <li style="background: none; border: none; padding: 0.25rem;">✅ Save your JavaScript file after making changes</li>
+      <li style="background: none; border: none; padding: 0.25rem;">✅ Refresh your browser to see the updates</li>
+      <li style="background: none; border: none; padding: 0.25rem;">✅ Check the console (F12) if something doesn't work</li>
+      <li style="background: none; border: none; padding: 0.25rem;">✅ Ask questions if you get stuck!</li>
+    </ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
