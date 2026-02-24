@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/app.js"></script>
+    <title>05-exercise</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Week 06: Events Exercise</h1>
+    
+    <!-- Exercise 1: Button Alert -->
+    <div class="exercise">
+      <h2>Show Alert</h2>
+      <p>When the button is clicked, show an alert that says "Hello from JavaScript!"</p>
+      <div class="exercise-content">
+        <button id="alert-btn">Click for Alert</button>
+      </div>
+    </div>
+
+    <!-- Exercise 2: Double Click -->
+    <div class="exercise">
+      <h2>Double Click Counter</h2>
+      <p>Count how many times the box is double-clicked and display the count.</p>
+      <div class="exercise-content">
+        <div id="dblclick-box" class="demo-box">
+          Double-click me!
+        </div>
+        <div id="dblclick-output" class="output">Double-click count: 0</div>
+      </div>
+    </div>
+
+    <!-- Exercise 3: Input Character Counter -->
+    <div class="exercise">
+      <h2>Character Counter</h2>
+      <p>Display how many characters are in the input field as the user types. Show "0 characters" when empty.</p>
+      <div class="exercise-content">
+        <input type="text" id="char-input" placeholder="Type something...">
+        <div id="char-output" class="output">0 characters</div>
+      </div>
+    </div>
+
+    <!-- Exercise 4: Button Toggle -->
+    <div class="exercise">
+      <h2>Text Visibility Toggle</h2>
+      <p>Make the button toggle the paragraph's visibility. Start with the paragraph hidden.</p>
+      <div class="exercise-content">
+        <button id="toggle-btn">Show Text</button>
+        <p id="toggle-text" style="display: none; margin-top: 1rem; padding: 1rem; background: white; border-radius: 8px;">
+          🎉 Surprise! You found the hidden text!
+        </p>
+      </div>
+    </div>
+
+    <!-- Exercise 5: Number Input Validator -->
+    <div class="exercise">
+      <h2>Exercise 5: Number Validator</h2>
+      <p>When the input loses focus (blur event), check if the number is between 1-100. 
+         Show the notification if valid, hide it if invalid.</p>
+      <div class="exercise-content">
+        <input type="number" id="number-input" placeholder="Enter a number (1-100)">
+        <div id="valid-notification" class="notification">
+          ✓ Valid number!
+        </div>
+      </div>
+    </div>
+
+    <!-- Bonus Challenge -->
+    <div class="exercise" style="border-left-color: #28a745;">
+      <h2>🌟 Bonus Challenge: Image Switcher</h2>
+      <p>Click buttons to change what emoji appears in the box!</p>
+      <div class="exercise-content">
+        <div id="emoji-display" class="image-display">😀</div>
+        <div>
+          <button id="emoji-cat">🐱 Cat</button>
+          <button id="emoji-dog">🐶 Dog</button>
+          <button id="emoji-rocket">🚀 Rocket</button>
+          <button id="emoji-pizza">🍕 Pizza</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
