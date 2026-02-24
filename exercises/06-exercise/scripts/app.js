@@ -71,3 +71,29 @@ numberInput.addEventListener('blur', function() {
   }
 
 });
+
+//bonus
+
+var emojiDisplay = document.getElementById("emoji-display");
+
+var catBtn = document.getElementById("emoji-cat");
+var dogBtn = document.getElementById("emoji-dog");
+var rocketBtn = document.getElementById("emoji-rocket");
+var pizzaBtn = document.getElementById("emoji-pizza");
+
+
+catBtn.addEventListener("click", function() {
+  emojiDisplay.textContent = "🐱";
+});
+
+dogBtn.addEventListener("click", function() {
+  emojiDisplay.textContent = "🐶";
+});
+
+rocketBtn.addEventListener("click", function() {
+  emojiDisplay.textContent = "🚀";
+});
+
+pizzaBtn.addEventListener("click", function() {
+  emojiDisplay.textContent = "🍕";
+});
