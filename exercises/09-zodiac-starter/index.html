@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-Zodiac starter</title>
+</head>
+<body>
+    <section>
+         <span class="problem-label">Problem 1</span>
+      <h2>Remember the Birthday</h2>
+      <p>Enter a birthday, find the zodiac sign, and save the birthday to <code>localStorage</code> so it pre-fills the next time the page loads.</p>
+
+      <div id="storage-badge" class="badge badge-green">✅ Loaded your saved birthday!</div>
+
+      <form id="remember-form">
+        <label for="birthday2">Birthday:</label>
+        <input type="date" id="birthday2" required>
+        <button type="submit">Get My Sign</button>
+      </form>
+
+      <div class="output" id="remember-output"></div>
+    </section>
+<hr>
+
+    <section>
+    <span class="problem-label">Problem 2</span>
+      <h2>Auto-dismiss Notification with setTimeout</h2>
+      <p>Enter a birthday and hit the button. Show an on-screen alert with the zodiac sign, then use <code>setTimeout</code> to automatically hide it after 3 seconds.</p>
+
+      <form id="timer-form">
+        <label for="birthday3">Birthday:</label>
+        <input type="date" id="birthday3" required>
+        <button type="submit">Get My Sign</button>
+      </form>
+
+      <div id="timer-notification" class="badge badge-blue"></div>
+
+    </section>
+
+    <hr>
+
+    <section>
+
+         <span class="problem-label">Problem 3</span>
+      <h2>Find Your Zodiac Sign</h2>
+      <p>Enter a birthday and click the button to see the zodiac sign. The formula is already written for you — just hook it up!</p>
+
+      <form id="zodiac-form">
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" required>
+        <button type="submit">Get My Sign</button>
+      </form>
+
+      <div id="zodiac-success" class="badge badge-green"></div>
+      <div class="output" id="zodiac-output"></div>
+
+    </section>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>

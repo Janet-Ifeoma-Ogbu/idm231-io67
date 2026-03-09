@@ -3,9 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDM231</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="scripts/app.js">
+    <title>Final</title>
 </head>
 <body>
-    <h1>idm231</h1>
+  
+    <div class="bg-image">
+
+    <div class="hero">
+
+     <div class="help-modal">
+      <div class="help-overlay"></div>
+      <div class="help-content">
+        <h2>How This Works</h2>
+        <p>1. Enter your name and birthday.</p>
+        <p>2. Click "Find" to see your zodiac sign and traits.</p>
+        <p>3. Click the symbols in "View All" to see each zodiac individually.</p>
+        <p>4. Use the back button to return to the start page.</p>
+        <button class="close-help">Close</button>
+      </div>
+    </div>
+
+      <h1>ZODIAC SIGN <br>CALCULATOR</h1>
+      <!-- <img id="light" src="./assets/images/Ellipse 2.png" alt=""> -->
+      <div class="click-sound-btn start-btn">Start</div>
+
+      <div class="nav">
+          <button id="helpBtn">?</button>
+     </div>
+    </div>
+
+    <div class="birthday-info">
+      <div class="nav">
+              <div class="back-btn">
+                  <img src="./assets/images/U Turn to Left.svg" alt="">
+                  <p class="back">back</p>
+              </div>
+              <div class="clear">
+                <button class="clear-btn">Clear</button>
+              </div>
+
+              
+            </div>
+
+      <h3>Enter birthday</h3>
+      <input type="text" id="name" name="name" placeholder="Your name"
+    >
+      <div class="birth-info">
+  <div class="field">
+    <label for="month">Month</label>
+    <select id="month" name="month">
+      <option value="">Select month</option>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="3">March</option>
+      <option value="4">April</option>
+      <option value="5">May</option>
+      <option value="6">June</option>
+      <option value="7">July</option>
+      <option value="8">August</option>
+      <option value="9">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="day">Day</label>
+    <input 
+      type="text" 
+      id="day" 
+      name="day" 
+      placeholder="Enter day"
+      maxlength="2"
+    >
+  </div>
+      </div>
+    <button class="click-sound-btn find-btn">Find my zodiac sign</button>      
+    <p id="birthday" class="birthday"> May 16</p>   
+    </div>
+
+    <div class="view-all">
+          
+            <div class="nav">
+              <div class="back-btn">
+                  <img src="./assets/images/U Turn to Left.svg" alt="">
+                  <p class="back">back</p>
+              </div>
+
+              
+            </div>
+
+            <div class="characters">
+
+                <div class="character" data-sign="1" >
+                  <img src="./assets/images/IMG_3113.JPG" alt="">
+                  <p>Aries</p>
+                </div>
+
+                <div class="character" data-sign="8">
+                  <img src="./assets/images/IMG_3351.JPG" alt="">
+                  <p>Scorpio</p>
+                </div>
+
+                <div class="character" data-sign="9">
+                  <img src="./assets/images/IMG_3355.JPG" alt="">
+                  <p>sagittarius</p>
+                </div>
+                <div class="character" data-sign="10">
+                  <img src="./assets/images/IMG_3363.JPG" alt="">
+                  <p>Capricorn</p>
+                </div>
+
+                <div class="character" data-sign="3">
+                  <img src="./assets/images/IMG_3371.JPG" alt="">
+                  <p>Gemini</p>
+                </div>
+
+                <div class="character" data-sign="6">
+                  <img src="./assets/images/IMG_3374.JPG" alt="">
+                  <p>virgo</p>
+                </div>
+                <div class="character" data-sign="5">
+                  <img src="./assets/images/IMG_3375.JPG" alt="">
+                  <p>leo</p>
+                </div>
+
+                <div class="character" data-sign="4">
+                  <img src="./assets/images/IMG_3380.JPG" alt="">
+                  <p>cancer</p>
+                </div>
+
+                <div class="character" data-sign="2">
+                  <img src="./assets/images/IMG_3382.JPG" alt="">
+                  <p>taurus</p>
+                </div>
+
+                <div class="character" data-sign="7">
+                  <img src="./assets/images/IMG_3384.JPG" alt="">
+                  <p>libra</p>
+                </div>
+
+                <div class="character" data-sign="12">
+                  <img src="./assets/images/IMG_3390.JPG" alt="">
+                  <p>Pisces</p>
+                </div>
+
+                <div class="character"  data-sign="11">
+                  <img src="./assets/images/IMG_3368.JPG" alt="">
+                  <p>Aquarius</p>
+                </div>
+
+
+            </div>
+
+          
+        </div>
+
+    <div class="zodiac" style="display: none;">
+
+  <div class="nav">
+    <div class="back-btn">
+      <img src="./assets/images/U Turn to Left.svg">
+      <p class="back">back</p>
+    </div>
+
+    <div class="view-all-btn">
+      <img src="./assets/images/Menu.png">
+      <p>view all</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="zodiac-data" >
+
+        <div class="zod zod-1">
+          <p id="sign">Your sign: Aries</p>
+          <img id="character-img" src="./assets/images/IMG_3356.JPG">
+          <p id="sign-info"><span>Lucy,</span>You give Courtney vibes</p>
+
+          <div class="traits">
+            <p class="trait">Eager</p>
+            <p class="trait">Competitive</p>
+            <p class="trait">Quick</p>
+          </div>
+        </div>
+
+        <div class="zod zod-2">
+          <p id="sign">Your sign: taurus</p>
+          <img id="character-img" src="./assets/images/IMG_3389.JPG">
+          <p id="sign-info"><span>Lucy,</span>You give Duncan vibes</p>
+
+          <div class="traits">
+            <p class="trait">strong</p>
+            <p class="trait">dependable</p>
+            <p class="trait">creative</p>
+          </div>
+        </div>
+  <div class="zod zod-3">
+            <p id="sign">Your sign: gemini</p>
+            <img id="character-img" src="./assets/images/IMG_3369.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give Lindsay vibes</p>
+        
+            <div class="traits">
+            <p class="trait">curious</p>
+            <p class="trait">expressive</p>
+            <p class="trait">kind</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-4">
+            <p id="sign">Your sign: cancer</p>
+            <img id="character-img" src="./assets/images/IMG_3379.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give Geoff vibes</p>
+        
+            <div class="traits">
+            <p class="trait">protective</p>
+            <p class="trait">sentimental</p>
+            <p class="trait">compassionate</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-5">
+            <p id="sign">Your sign: leo</p>
+            <img id="character-img" src="./assets/images/IMG_3376.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give leshawna vibes</p>
+        
+            <div class="traits">
+            <p class="trait">fiery</p>
+            <p class="trait">outgoing</p>
+            <p class="trait">dramatic</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-6">
+            <p id="sign">Your sign: virgo</p>
+            <img id="character-img" src="./assets/images/IMG_3373.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give justin vibes</p>
+        
+            <div class="traits">
+            <p class="trait">gentle</p>
+            <p class="trait">self aware</p>
+            <p class="trait">perfectionistic</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-7">
+            <p id="sign">Your sign: libra</p>
+            <img id="character-img" src="./assets/images/IMG_3386.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give beth vibes</p>
+        
+            <div class="traits">
+            <p class="trait">gracious</p>
+            <p class="trait">diplomatic</p>
+            <p class="trait">clever</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-8">
+            <p id="sign">Your sign: scorpio</p>
+            <img id="character-img" src="./assets/images/IMG_3352.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give chris vibes</p>
+        
+            <div class="traits">
+            <p class="trait">stubborn</p>
+            <p class="trait">resourceful</p>
+            <p class="trait">independent</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-9">
+            <p id="sign">Your sign: sagittarius</p>
+            <img id="character-img" src="./assets/images/IMG_3353.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give owen vibes</p>
+        
+            <div class="traits">
+            <p class="trait">funny</p>
+            <p class="trait">optimistic</p>
+            <p class="trait">honest</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-10">
+            <p id="sign">Your sign: capricorn</p>
+            <img id="character-img" src="./assets/images/IMG_3362.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give heather vibes</p>
+        
+            <div class="traits">
+            <p class="trait">tenacious</p>
+            <p class="trait">serious</p>
+            <p class="trait">smart</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-11">
+            <p id="sign">Your sign: aquarius</p>
+            <img id="character-img" src="./assets/images/IMG_3387.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give harold vibes</p>
+        
+            <div class="traits">
+            <p class="trait">deep</p>
+            <p class="trait">unpredictable</p>
+            <p class="trait">imaginative</p>
+            </div>
+            
+          </div>
+          <div class="zod zod-12">
+            <p id="sign">Your sign: pisces</p>
+            <img id="character-img" src="./assets/images/IMG_3388.JPG" alt="">
+            <p id="sign-info"><span>Lucy,</span>You give gwen vibes</p>
+        
+            <div class="traits">
+            <p class="trait">empathetic</p>
+            <p class="trait">laidback</p>
+            <p class="trait">genuine</p>
+            </div>
+          </div>
+
+ 
+
+</div>
+    
+
+    <div class="zodiac-modal">
+  <div class="overlay"></div>
+
+  <div class="modal-content">
+      <div class="modal-zodiac"></div>
+  </div>
+
+
+</div>
+
+</div>
+
+
+  <footer>
+    
+  </footer>
+    <script src="./scripts/app.js"></script>
 </body>
 </html>
