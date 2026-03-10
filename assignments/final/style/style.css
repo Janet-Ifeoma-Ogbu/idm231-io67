@@ -83,7 +83,7 @@ h1{
 
 
 
-.birthday-info h3{
+.birthday-info h2{
   color: #F69F08;
   font-size: 3rem;
   letter-spacing: 3px;
@@ -422,7 +422,7 @@ h1{
   cursor: pointer;
 }
 
- #sign {
+ .sign {
   font-size: 3rem;
   color: #F69F08;
   margin: 24px 0;
