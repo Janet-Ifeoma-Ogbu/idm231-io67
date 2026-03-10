@@ -317,7 +317,7 @@ findBtn.addEventListener("click", function() {
 
 if(correctZod){
 
-  var nameSpan = correctZod.querySelector("#sign-info span");
+  var nameSpan = correctZod.querySelector(".sign-info span");
   nameSpan.textContent = name + ",";
 
   correctZod.classList.add("show");
