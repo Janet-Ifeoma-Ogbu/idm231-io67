@@ -288,9 +288,7 @@ h1{
   object-fit: cover;
   border-radius: 15px;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-              box-shadow 0.4s ease,
-              opacity 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.4s ease, opacity 0.3s ease;
 }
 
 .zod img {
@@ -299,16 +297,14 @@ h1{
   object-fit: cover;
   border-radius: 15px;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-              box-shadow 0.4s ease,
-              opacity 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),box-shadow 0.4s ease,opacity 0.3s ease;
 }
 
 .character img:hover,
 .zod img:hover {
-  transform: translateY(-15px) scale(1.08); /* floats up and grows slightly */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.35); /* deeper shadow */
-  opacity: 0.95; /* slight fade for depth */
+  transform: translateY(-15px) scale(1.08); 
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35); 
+  opacity: 0.95; 
 }
 
 .character p {
