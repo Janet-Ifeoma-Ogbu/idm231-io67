@@ -3,8 +3,7 @@
 window.addEventListener("DOMContentLoaded", function(){
 
   nameInput.value = localStorage.getItem("name") || "";
-  monthInput.value = localStorage.getItem("month") || "";
-  dayInput.value = localStorage.getItem("day") || "";
+  birthdayInput.value = localStorage.getItem("birthday") || "";
 
 });
 
@@ -52,17 +51,17 @@ clearBtn.addEventListener("click", function(){
   localStorage.clear();
 
   nameInput.value = "";
-  monthInput.value = "";
-  dayInput.value = "";
+  birthdayInput.value = "";
 
   clearSound.currentTime = 0;
-    clearSound.play();
+  clearSound.play();
+
 
 });
 
+
 //help section
 
-// Help Modal Elements
 
 var helpSound = new Audio('assets/sounds/Pen_click.mp3');
 clearSound.preload = "auto";
@@ -146,32 +145,37 @@ var viewAllDiv = document.querySelector(".view-all");
 var hero = document.querySelector(".hero");
 var zodiacSection = document.querySelector(".zodiac");
 
-var viewAllBtn = document.querySelector(".view-all-btn");
+var viewAllBtns = document.querySelectorAll(".view-all-btn");
 
-if(viewAllBtn){
-  viewAllBtn.addEventListener("click", function(){
+viewAllBtns.forEach(function(btn){
 
-  mode = "viewAll";   // switch mode
+  btn.addEventListener("click", function(){
 
-  document.querySelectorAll(".zod").forEach(function(z) {
+    mode = "viewAll";
+
+    document.querySelectorAll(".zod").forEach(function(z){
       z.classList.remove("show");
     });
 
-  hero.style.display = "none";
-  birthdayInfo.style.display = "none";
-  if (zodiacSection) zodiacSection.style.display = "none";
+    hero.style.display = "none";
+    birthdayInfo.style.display = "none";
+    if (zodiacSection) zodiacSection.style.display = "none";
 
-  viewAllDiv.style.display = "flex";
+    viewAllDiv.style.display = "flex";
 
-  backSound.currentTime = 0;
+
+    backSound.currentTime = 0;
     backSound.play();
 
+  });
+
 });
-}
+
 var characters = document.querySelectorAll(".character");
 var modal = document.querySelector(".zodiac-modal");
 var overlay = document.querySelector(".overlay");
 var modalZodiac = document.querySelector(".modal-zodiac");
+var currentSound = new Audio();
 
 characters.forEach(function(character){
 
@@ -189,6 +193,11 @@ characters.forEach(function(character){
 
         var clone = zodiacCard.cloneNode(true);
 
+        var signInfo = clone.querySelector(".sign-info");
+        if(signInfo){
+          signInfo.remove();
+        }
+
         clone.classList.add("show");
 
         modalZodiac.appendChild(clone);
@@ -196,12 +205,24 @@ characters.forEach(function(character){
         modal.style.display = "block";
         overlay.style.display = "block";
 
+
+        var soundFile = zodiacSounds[signNumber];
+
+        if(soundFile){
+          currentSound.pause();
+          currentSound.currentTime = 0;
+          currentSound.src = soundFile;
+          currentSound.play();
+        }
+
+
       }
 
     }
 
   });
 
+  
 });
 
 overlay.addEventListener("click", function(){
@@ -216,43 +237,58 @@ overlay.addEventListener("click", function(){
 
 //get zodiac
 
+
 var findBtn = document.querySelector(".find-btn");
 
 var nameInput = document.getElementById("name");
-var monthInput = document.getElementById("month");
-var dayInput = document.getElementById("day");
+var birthdayInput = document.getElementById("birthday-input");
+var birthdayDisplay = document.getElementById("birthday-display");
 
-// select the birthday display element
-var birthdayDisplay = document.getElementById("birthday");
 
-// function to update birthday display
-function updateBirthdayDisplay() {
-  var month = parseInt(monthInput.value);
-  var day = parseInt(dayInput.value);
+birthdayInput.addEventListener("input", function(){
 
-  if (!month || !day) {
-    birthdayDisplay.textContent = ""; // clear if incomplete
-    return;
-  }
+  var birthday = birthdayInput.value;
+  if(!birthday) return;
+
+  localStorage.setItem("birthday", birthday);
+
+  var parts = birthday.split("-");
+
+  var year = parts[0];
+  var month = parts[1];
+  var day = parts[2];
 
   var months = [
     "January","February","March","April","May","June",
     "July","August","September","October","November","December"
   ];
 
-  birthdayDisplay.textContent = months[month - 1] + " " + day;
+  birthdayDisplay.textContent =
+    months[month - 1] + " " + day + " " + year;
+
+});
+
+
+
+// restore saved birthday on page load
+var savedBirthday = localStorage.getItem("birthday");
+
+if(savedBirthday){
+  birthdayInput.value = savedBirthday;
+
+  var date = new Date(savedBirthday);
+
+  var months = [
+    "January","February","March","April","May","June",
+    "July","August","September","October","November","December"
+  ];
+
+  birthdayDisplay.textContent =
+    months[date.getMonth()] + " " +
+    date.getDate() + ", " +
+    date.getFullYear();
 }
 
-// attach live update listeners
-monthInput.addEventListener("input", updateBirthdayDisplay);
-dayInput.addEventListener("input", updateBirthdayDisplay);
-
-// optional: update display on page load if localStorage has values
-if (localStorage.getItem("month") && localStorage.getItem("day")) {
-  monthInput.value = localStorage.getItem("month");
-  dayInput.value = localStorage.getItem("day");
-  updateBirthdayDisplay();
-}
 
 var zodiacSounds = {
   1: 'assets/sounds/courtney.m4a',
@@ -287,16 +323,20 @@ function getZodiac(month, day) {
 
 
 // button click event
-findBtn.addEventListener("click", function() {
+findBtn.addEventListener("click", function(){
 
   var name = nameInput.value;
-  var month = parseInt(monthInput.value);
-  var day = parseInt(dayInput.value);
+  var birthday = birthdayInput.value;
 
-  if (!name || !month || !day) {
+  if(!name || !birthday){
     alert("Please enter all fields");
     return;
   }
+
+  var date = new Date(birthday);
+
+  var month = date.getMonth() + 1;
+  var day = date.getDate();
 
   var zodiacNumber = getZodiac(month, day);
 
@@ -384,7 +424,7 @@ document.querySelectorAll(".zod").forEach(function(zod){
 }
 
 localStorage.setItem("name", name);
-localStorage.setItem("month", month);
-localStorage.setItem("day", day);
+localStorage.setItem("birthday", birthday);
 });
+
 

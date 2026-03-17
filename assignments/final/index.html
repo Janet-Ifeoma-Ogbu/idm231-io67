@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/images/ellipse2.png">
+    <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="scripts/app.js">
     <title>Final</title>
@@ -17,11 +19,20 @@
       <div class="help-overlay"></div>
       <div class="help-content">
         <h2>How This Works</h2>
-        <p>1. Enter your name and birthday.</p>
-        <p>2. Click "Find" to see your zodiac sign and traits.</p>
-        <p>3. Click the symbols in "View All" to see each zodiac individually.</p>
-        <p>4. Use the back button to return to the start page.</p>
+        <p>1. Click on the start button</p>
+        <p>2. Enter your name and birthday.</p>
+        <p>3. Click "Find" to see your zodiac sign and traits.</p>
+        <p>4. Click the symbols in "View All" to see each zodiac individually.</p>
+        <p>5. Use the back button to return to the start page.</p>
         <button class="close-help">Close</button>
+      </div>
+    </div>
+
+      <div class="nav">
+
+      <div class="view-all-btn">
+      <img src="./assets/images/heather.png" >      
+      <p>view all</p>
       </div>
     </div>
 
@@ -48,41 +59,24 @@
             </div>
 
       <h2>Enter birthday</h2>
-      <input type="text" id="name" name="name" placeholder="Your name"
-    >
+      <input type="text" id="name" name="name" placeholder="Your name">
+    
       <div class="birth-info">
-  <div class="field">
-    <label for="month">Month</label>
-    <select id="month" name="month">
-      <option value="">Select month</option>
-      <option value="1">January</option>
-      <option value="2">February</option>
-      <option value="3">March</option>
-      <option value="4">April</option>
-      <option value="5">May</option>
-      <option value="6">June</option>
-      <option value="7">July</option>
-      <option value="8">August</option>
-      <option value="9">September</option>
-      <option value="10">October</option>
-      <option value="11">November</option>
-      <option value="12">December</option>
-    </select>
-  </div>
 
   <div class="field">
-    <label for="day">Day</label>
+    <label for="birthday">Birthday</label>
     <input 
-      type="text" 
-      id="day" 
-      name="day" 
-      placeholder="Enter day"
-      maxlength="2"
+      type="date"
+      id="birthday-input"
+      name="birthday"
+      required
     >
   </div>
-      </div>
+
+</div>
+
     <button class="click-sound-btn find-btn">Find my zodiac sign</button>      
-    <p id="birthday" class="birthday"> May 16</p>   
+    <p id="birthday-display" class="birthday"> </p>   
     </div>
 
     <div class="view-all">
