@@ -34,18 +34,15 @@ body {
 }
 
 .hero{ 
-   color: #ffdbae;
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  gap: 1rem;
-  letter-spacing: 1px;
-
-  margin: 0 auto;     /* 👈 centers horizontally */
-  padding: 0 20px; 
+   color: #ffdbae; 
+   display: flex; 
+   gap: 1rem; 
+   justify-content: center; 
+   letter-spacing: 1px; 
+   flex-direction: column; 
+   text-align: center; 
+   margin: 0 3rem; 
+   align-items: center;
 
 }
 .birthday-info{
@@ -467,7 +464,7 @@ h1{
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   h1{
     margin: 0.67em 0;
   }
