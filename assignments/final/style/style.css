@@ -14,7 +14,6 @@
 
 /* Body styling */
 body {
-  /* max-width:1280px; */
   margin: 0;
   padding: 0;
   width: 100%;
@@ -28,17 +27,25 @@ body {
   background-attachment: fixed;  
 }
 
+.bg-image{
+  max-width:1280px; 
+   margin: 0 auto;
+  padding: 0 20px;
+}
 
 .hero{ 
-  color: #ffdbae;
+   color: #ffdbae;
   display: flex; 
-  gap: 1rem;
-  justify-content: center;  
-  letter-spacing: 1px;
   flex-direction: column;
-  text-align: center;
-  margin: 0 3rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  gap: 1rem;
+  letter-spacing: 1px;
+
+  margin: 0 auto;     /* 👈 centers horizontally */
+  padding: 0 20px; 
 
 }
 .birthday-info{
@@ -456,4 +463,12 @@ h1{
   padding: 5px 15px;
   margin: 0px;
   font-size: 1.2rem
+}
+
+
+
+@media (min-width: 1200px) {
+  h1{
+    margin: 0.67em 0;
+  }
 }
